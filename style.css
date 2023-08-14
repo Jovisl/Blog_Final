@@ -1,0 +1,105 @@
+/* Variables */
+:root {
+    --primary-bg-color: #0C0C0C;
+    --secondary-bg-color: #1E1E1E;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #B3B3B3;
+    --highlight-color: #FF2B06;
+    --font-family: 'Roboto', sans-serif;
+    --spacing: 1rem;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--secondary-text-color);
+}
+
+h1, h2, h3 {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.navbar {
+    background-color: var(--secondary-bg-color);
+    padding: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--spacing);
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.menu-toggle {
+    display: none; /* this can be expanded for mobile devices */
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+}
+
+.footer {
+    background-color: var(--secondary-bg-color);
+    padding: var(--spacing);
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+.input-group {
+    margin-bottom: var(--spacing);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--highlight-color);
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: var(--highlight-color);
+    border: none;
+    cursor: pointer;
+    color: var(--primary-text-color);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-text-color);
+}
